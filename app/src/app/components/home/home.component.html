@@ -1,10 +1,14 @@
 <div style="text-align:center">
   <h1>
-    Welcome! {{test}}
+    Welcome!
   </h1>
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img style = 'display:block; width:400px;height:200px;' id='base64image' class="center" src = {{this.base64Image}}/>
+    </a>
+  </div>
   <table>
     <tr *ngFor = "let x of rates">
-      <!-- <td>My row</td> -->
       <td>{{x.currency}}</td>
       <td>{{x.code}}</td>
       <td>{{x.mid}}</td>
