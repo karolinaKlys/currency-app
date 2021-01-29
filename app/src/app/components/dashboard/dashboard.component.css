@@ -1,0 +1,21 @@
+.currency-img {
+  display: block;
+  width: 400px;
+  height: auto;
+}
+
+.center {
+  display: block;
+  width: 30%;
+}
+
+.flex-container {
+  justify-content: space-around;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  align-self: flex-end;
+  height: 50px;
+}

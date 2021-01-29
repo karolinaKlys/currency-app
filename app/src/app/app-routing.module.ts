@@ -1,26 +1,25 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from "./../app/components/home/home.component";
-import { SplashScreenComponent } from "./../app/components/splash-screen/splash-screen.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {SignInComponent} from './components/sign-in/sign-in.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
+import {VerifyEmailComponent} from './components/verify-email/verify-email.component';
+import {SignUpComponent} from './components/sign-up/sign-up.component';
+import {AuthGuard} from './shared/guard/auth.guard';
+import {SplashScreenComponent} from './components/splash-screen/splash-screen.component';
 
 const routes: Routes = [
-  { path: '', component: SplashScreenComponent },
-  { path: 'home', component: HomeComponent}
+  {path: '', component: SplashScreenComponent},
+  {path: 'sign-in', component: SignInComponent},
+  {path: 'register-user', component: SignUpComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'forgot-password', component: ForgotPasswordComponent},
+  {path: 'verify-email-address', component: VerifyEmailComponent}
 ];
 
-// const routes: Routes = [
-//   {
-//     component: HomeComponent,
-//     path: "home"
-//   },
-//   {
-//     path: "",
-//     redirectTo: "/home",
-//     pathMatch: "full"
-//   }
-// ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
