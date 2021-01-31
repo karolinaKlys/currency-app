@@ -5,7 +5,7 @@ import {NbpDbService} from '../../shared/services/nbp-db.service';
 import {Observable, Observer} from 'rxjs';
 import {Picture} from '../../shared/model/Picture';
 import {CurrencyDisplayPipe} from '../../shared/services/currency.pipe';
-import { NotificationService } from 'src/app/services/notification.service';
+import { NotificationService } from 'src/app/shared/services/notification.service';
 import { NbpModel } from 'src/app/shared/model/nbpModel';
 import { map, switchMap } from 'rxjs/operators';
 
