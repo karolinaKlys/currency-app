@@ -19,6 +19,7 @@ import {DBConfig, NgxIndexedDBModule} from 'ngx-indexed-db';
 import {HttpClientModule} from '@angular/common/http';
 import {SplashScreenComponent} from './components/splash-screen/splash-screen.component';
 import {CurrencyDisplayPipe} from './shared/services/currency.pipe';
+import {NotificationComponent} from './components/dashboard/notification/notification.component';
 
 const dBConfig: DBConfig = {
   name: 'db',
@@ -50,7 +51,8 @@ const dBConfig: DBConfig = {
     ForgotPasswordComponent,
     VerifyEmailComponent,
     SplashScreenComponent,
-    CurrencyDisplayPipe
+    CurrencyDisplayPipe,
+    NotificationComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

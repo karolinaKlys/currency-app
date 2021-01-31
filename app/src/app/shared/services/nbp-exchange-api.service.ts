@@ -15,7 +15,7 @@ export class NbpExchangeService {
   constructor(private http: HttpClient) {
   }
 
-  public getCurrencyRates(): Observable<NbpModel> {
+  public getCurrencyRates(): Observable<NbpModel[]> {
     return this.http.get<any>(this.apiURL)
       .pipe(
         retry(1),
